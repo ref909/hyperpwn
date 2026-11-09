@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One unescaped str.format(): 36 ISP and hosting footholds from a public looking glass</title>
+<title>Rooting multiple ISPs with hyperglass</title>
 <meta name="description" content="An unauthenticated command injection in hyperglass /api/query, and the 36 ISP and hosting footholds behind it.">
 <style>
 :root{color-scheme:dark}
@@ -19,7 +19,7 @@ footer{margin-top:3rem;font-size:.85em;color:#8b949e}
 </style>
 </head>
 <body>
-<h1>One unescaped <code>str.format()</code>: 36 ISP and hosting footholds from a public looking glass</h1>
+<h1>Rooting multiple ISPs with hyperglass</h1>
 <p>hyperglass is a looking-glass front end. You give it a target, it drops that target into a router command and hands the result to Netmiko. The target goes in with a bare <code>str.format()</code> and is never shell-escaped. On any platform where the command ends up in a Linux shell, the target stops being data.</p>
 <p>A sweep of PeeringDB and Shodan for exposed hyperglass instances produced 36 hosts with command execution across 20 ASNs, 11 of them root or root-equivalent. Almost all are collectors and edge VMs, not core forwarding routers. None is a whole-AS compromise — but a lot of this is real infrastructure with reusable credentials behind it.</p>
 <h2>What was reachable</h2>
